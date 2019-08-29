@@ -39,6 +39,16 @@ public class SpiderLeg
             {
                 this.links.add(link.absUrl("href"));
             }
+            Elements ingridients=htmlDocument.select("span[itemprop="+"recipeIngredient"+"]");
+            Element image=htmlDocument.selectFirst("img[itemprop=image]");
+            Element title=htmlDocument.selectFirst("h1[itemprop=name]");
+            if(ingridients!=null) {
+                System.out.println(title.text());
+                System.out.println(image.attr("src"));
+                for (Element e : ingridients) {
+                    System.out.println(e.text());
+                }
+            }
             return true;
         }
         catch(IOException ioe)
@@ -46,6 +56,10 @@ public class SpiderLeg
             // We were not successful in our HTTP request
             return false;
         }
+    }
+
+    public void save(Elements indridients){
+
     }
 
     public boolean searchForWord(String searchWord)
