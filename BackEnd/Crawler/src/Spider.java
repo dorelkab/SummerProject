@@ -19,29 +19,26 @@ public class Spider {
         return nextUrl;
     }
 
-    public void search(String url, String searchWord)
+    public void search(String url)
     {
-        while(this.pagesVisited.size() < MAX_PAGES_TO_SEARCH)
+        SpiderLeg leg = new SpiderLeg();
+        String currentUrl;
+        currentUrl = url;
+        leg.crawl(currentUrl);
+        this.pagesVisited.add(url);
+        this.pagesToVisit.addAll(leg.getLinks());
+        while(!this.pagesToVisit.isEmpty())
         {
-            String currentUrl;
-            SpiderLeg leg = new SpiderLeg();
-            if(this.pagesToVisit.isEmpty())
-            {
-                currentUrl = url;
-                this.pagesVisited.add(url);
-            }
-            else
-            {
-                currentUrl = this.nextUrl();
-            }
+            leg = new SpiderLeg();
+            currentUrl = this.nextUrl();
             leg.crawl(currentUrl); // Lots of stuff happening here. Look at the crawl method in
             // SpiderLeg
-            boolean success = leg.searchForWord(searchWord);
-            if(success)
-            {
-                System.out.println(String.format("**Success** Word %s found at %s", searchWord, currentUrl));
-                break;
-            }
+            //boolean success = leg.searchForWord(searchWord);
+            //if(success)
+            //{
+            //    System.out.println(String.format("**Success** Word %s found at %s", searchWord, currentUrl));
+            //    break;
+            //}
             this.pagesToVisit.addAll(leg.getLinks());
         }
         System.out.println(String.format("**Done** Visited %s web page(s)", this.pagesVisited.size()));

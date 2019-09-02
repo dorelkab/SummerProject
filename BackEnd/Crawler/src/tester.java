@@ -1,6 +1,9 @@
 public class tester {
     public static void main(String args[]){
-        SpiderLeg sl=new SpiderLeg();
-        sl.crawl("https://www.mako.co.il/food-cooking_magazine/fresh_market/Recipe-1e0011078d83c61026.htm?sCh=55e439cdf3178110&pId=25483675");
+        //System.out.println("מ\"ל");
+        //SpiderLeg sl=new SpiderLeg();
+        Spider sp=new Spider();
+        sp.search("https://www.mako.co.il/food-recipes?partner=SecondNav");
+        //sl.crawl("https://www.mako.co.il/food-shavuot/Recipe-50ee70098c92551006.htm?sCh=a91539cdf3178110&pId=25483675");
     }
 }
