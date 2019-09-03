@@ -3,13 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="69d00c43-14dd-4d8a-bc52-d5482d004fd6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Crawler/Spider.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Crawler/Spider.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Crawler/SpiderLeg.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Crawler/SpiderLeg.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Crawler/tester.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Crawler/tester.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Spider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Spider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SpiderLeg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SpiderLeg.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tester.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DataBase/MetaData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../DataBase/MetaData.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DataBase/MetaData.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../DataBase/MetaData.csv" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -87,7 +81,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1567003512296</updated>
-      <workItem from="1567003515954" duration="34939000" />
+      <workItem from="1567003515954" duration="40705000" />
     </task>
     <servers />
   </component>
