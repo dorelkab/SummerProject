@@ -1,4 +1,5 @@
 import java.io.*;
+import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -15,10 +16,12 @@ public class SpiderLeg
             "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/13.0.782.112 Safari/535.1";
     private List<String> links = new LinkedList<>();
     private Document htmlDocument;
+    private HashMap<String,List<Recipe>> Recipes=new HashMap<>();
 
     public boolean crawl(String url)
     {
         try {
+            links.clear();
             Connection connection = Jsoup.connect(url).userAgent(USER_AGENT);
             Document htmlDocument = connection.get();
             this.htmlDocument = htmlDocument;
@@ -39,14 +42,16 @@ public class SpiderLeg
                     }
                 }
                 Elements ingridients = htmlDocument.select("span[itemprop=" + "recipeIngredient" + "]");
-                //Element image=htmlDocument.selectFirst("img[itemprop=image]");
-                //Element title=htmlDocument.selectFirst("h1[itemprop=name]");
-                if (ingridients != null) {
-                    BufferedWriter bw = new BufferedWriter(new FileWriter("C:\\Users\\dordo\\AndroidStudioProjects\\SummerProject\\BackEnd\\DataBase\\MetaData.csv", true));
+                Element image=htmlDocument.selectFirst("img[itemprop=image]");
+                Element title=htmlDocument.selectFirst("h1[itemprop=name]");
+                if (!ingridients.isEmpty()) {
+                    BufferedWriter bw = new BufferedWriter(new FileWriter("C:\\Users\\dordo\\AndroidStudioProjects\\SummerProject\\BackEnd\\DataBase\\Vectors.csv", true));
+                    String key="";
                     //System.out.println(title.text());
                     //System.out.println(image.attr("src"));
+                    System.out.println("C");
                     for (Element e : ingridients) {
-                        BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\dordo\\AndroidStudioProjects\\SummerProject\\BackEnd\\DataBase\\MetaData.csv"));
+                        BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\dordo\\AndroidStudioProjects\\SummerProject\\BackEnd\\DataBase\\CompressedIngridientTable1.csv"));
                         String Ingrid = e.text().replaceAll("[\\d.]", "");
                         String banned[] = {"שלושת רבעי", "כוסות","כפית", "חופן", "כפות", "גרם", "ליטר", "מ\"ל", "ק\"ג", "וחצי", "ורבע", "רבע", "חצי", "ושליש", "שליש", "שני שלישים", "שני שליש", "מכפית", "כוס", "מכף", "כפיות", "גדול", "קטן", "קורט", "גביע", "ועוד", "פחות", "כף", "כפית", "לפחות", "מעט", "קופסה", "מיכל", "מכלי", "מכל", "קופסת", "גדושות", "כ-", "", ",", "()","%"," ים"," ות","\uFEFF"};
                         Ingrid=Ingrid.replaceAll("[^ א-ת]", "");
@@ -62,22 +67,43 @@ public class SpiderLeg
                         if (Ingrid.length()>0 && Ingrid.charAt(Ingrid.length() - 1) == ' ') {
                             Ingrid = Ingrid.substring(0, Ingrid.length() - 1);
                         }
-                        boolean temp = false;
                         String line = null;
+                        int index=0;
                         while ((line = br.readLine()) != null) {
-                            if (line.charAt(0) == '\uFEFF')
-                                line = line.substring(1);
-                            if (line.equals(Ingrid)) {
-                                temp = true;
-                                break;
+                            String[] seperated=line.split(",");
+                            boolean found=false;
+                            for(int i=0; i<seperated.length; i++){
+                                if(Ingrid.contains(seperated[i])){
+                                    found=true;
+                                    key=key+index+",";
+                                    break;
+                                }
                             }
+                            if(found)
+                                break;
+                            index++;
                         }
-                        if (!temp) {
-                            bw.newLine();
-                            bw.write(Ingrid);
-                        }
-                        //System.out.println(Ingrid);
                         br.close();
+                    }
+                    System.out.println("D");
+                    if(Recipes.containsKey(key)){
+                        if(image!=null)
+                            Recipes.get(key).add(new Recipe(image.attr("src"),title.text(),url));
+                        else if(title!=null)
+                            Recipes.get(key).add(new Recipe(null,title.text(),url));
+                        else
+                            Recipes.get(key).add(new Recipe(null,null,url));
+                    }
+                    else{
+                        Recipes.put(key,new LinkedList<>());
+                        if(image!=null)
+                            Recipes.get(key).add(new Recipe(image.attr("src"),title.text(),url));
+                        else if(title!=null)
+                            Recipes.get(key).add(new Recipe(null,title.text(),url));
+                        else
+                            Recipes.get(key).add(new Recipe(null,null,url));
+                        bw.write(key);
+                        bw.newLine();
                     }
                     bw.close();
                 }
@@ -89,8 +115,15 @@ public class SpiderLeg
         }
     }
 
-    public void save(Elements ingridients){
-
+    public void save(){
+        ObjectOutputStream objectOutputStream = null;
+        try {
+            objectOutputStream = new ObjectOutputStream(new FileOutputStream("C:\\Users\\dordo\\AndroidStudioProjects\\SummerProject\\BackEnd\\DataBase\\RecipesDictionary"));
+            objectOutputStream.writeObject(Recipes);
+            objectOutputStream.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public boolean searchForWord(String searchWord)

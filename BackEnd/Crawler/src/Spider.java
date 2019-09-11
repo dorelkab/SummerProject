@@ -7,6 +7,7 @@ public class Spider {
     private static final int MAX_PAGES_TO_SEARCH = 10;
     private Set<String> pagesVisited = new HashSet<>();
     private List<String> pagesToVisit = new LinkedList<>();
+    private SpiderLeg leg = new SpiderLeg();
 
     private String nextUrl()
     {
@@ -14,14 +15,16 @@ public class Spider {
         do
         {
             nextUrl = this.pagesToVisit.remove(0);
+            if(this.pagesVisited.contains(nextUrl) && this.pagesToVisit.isEmpty())
+                return null;
         } while(this.pagesVisited.contains(nextUrl));
+        System.out.println("B");
         this.pagesVisited.add(nextUrl);
         return nextUrl;
     }
 
     public void search(String url)
     {
-        SpiderLeg leg = new SpiderLeg();
         String currentUrl;
         currentUrl = url;
         leg.crawl(currentUrl);
@@ -29,18 +32,22 @@ public class Spider {
         this.pagesToVisit.addAll(leg.getLinks());
         while(!this.pagesToVisit.isEmpty())
         {
-            leg = new SpiderLeg();
+            System.out.println("A");
             currentUrl = this.nextUrl();
-            leg.crawl(currentUrl); // Lots of stuff happening here. Look at the crawl method in
-            // SpiderLeg
-            //boolean success = leg.searchForWord(searchWord);
-            //if(success)
-            //{
-            //    System.out.println(String.format("**Success** Word %s found at %s", searchWord, currentUrl));
-            //    break;
-            //}
-            this.pagesToVisit.addAll(leg.getLinks());
+            if(currentUrl!=null) {
+                leg.crawl(currentUrl); // Lots of stuff happening here. Look at the crawl method in
+                // SpiderLeg
+                //boolean success = leg.searchForWord(searchWord);
+                //if(success)
+                //{
+                //    System.out.println(String.format("**Success** Word %s found at %s", searchWord, currentUrl));
+                //    break;
+                //}
+                this.pagesToVisit.addAll(leg.getLinks());
+            }
         }
+        System.out.println("E");
+        leg.save();
         System.out.println(String.format("**Done** Visited %s web page(s)", this.pagesVisited.size()));
     }
 }

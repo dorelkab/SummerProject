@@ -2,8 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69d00c43-14dd-4d8a-bc52-d5482d004fd6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Resources/Recipe.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DataBase/FinalData/RecipesDictionary" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../DataBase/FinalData/Vectors.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Recipe/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Recipe/.idea/artifacts/Recipe_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Recipe/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Recipe/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Recipe/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Recipe/Recipe.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Recipe/out/artifacts/Recipe_jar/Recipe.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Recipe/out/production/Recipe/Recipe.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Recipe/src/Recipe.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DataBase/MetaData.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../DataBase/MetaData.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Crawler.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Crawler.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Crawler/Spider.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Crawler/Spider.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Crawler/SpiderLeg.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Crawler/SpiderLeg.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Crawler/tester.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Crawler/tester.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Categorizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Categorizer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Spider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Spider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SpiderLeg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SpiderLeg.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tester.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,12 +41,15 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="ProjectId" id="1Q3e49yrp3kz6dv2hBsz7PCp2Te" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Resources/jsoup-1.12.1.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Resources/Recipe.jar!/" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -39,6 +61,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -81,7 +104,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1567003512296</updated>
-      <workItem from="1567003515954" duration="40705000" />
+      <workItem from="1567003515954" duration="82855000" />
     </task>
     <servers />
   </component>
@@ -99,18 +122,16 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/SpiderLeg.java</url>
-          <line>37</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/tester.java</url>
-          <line>6</line>
-          <option name="timeStamp" value="5" />
+          <url>file://$PROJECT_DIR$/src/Categorizer.java</url>
+          <line>56</line>
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
