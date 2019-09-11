@@ -2,27 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69d00c43-14dd-4d8a-bc52-d5482d004fd6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Resources/Recipe.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DataBase/FinalData/RecipesDictionary" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../DataBase/FinalData/Vectors.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Recipe/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Recipe/.idea/artifacts/Recipe_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Recipe/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Recipe/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Recipe/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Recipe/Recipe.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Recipe/out/artifacts/Recipe_jar/Recipe.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Recipe/out/production/Recipe/Recipe.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Recipe/src/Recipe.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Server/src/Server.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Crawler.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Crawler.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Crawler/Spider.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Crawler/Spider.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Crawler/SpiderLeg.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Crawler/SpiderLeg.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Crawler/tester.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Crawler/tester.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Categorizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Categorizer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Spider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Spider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SpiderLeg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SpiderLeg.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tester.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -49,7 +30,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Resources/Recipe.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -104,7 +85,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1567003512296</updated>
-      <workItem from="1567003515954" duration="82855000" />
+      <workItem from="1567003515954" duration="82893000" />
+      <workItem from="1568211690271" duration="5000" />
     </task>
     <servers />
   </component>
@@ -116,7 +98,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
