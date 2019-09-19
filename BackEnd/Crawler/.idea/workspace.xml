@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69d00c43-14dd-4d8a-bc52-d5482d004fd6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../Server/src/IPrioritized.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Server/src/IServerStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Server/src/PrioritizedRecipe.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Server/src/PrioritizedRecipeComperator.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Server/src/Server.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Server/src/ServerStrategyRecipeMatcher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -87,6 +92,7 @@
       <updated>1567003512296</updated>
       <workItem from="1567003515954" duration="82893000" />
       <workItem from="1568211690271" duration="5000" />
+      <workItem from="1568824486039" duration="1265000" />
     </task>
     <servers />
   </component>
