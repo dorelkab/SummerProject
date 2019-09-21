@@ -1,9 +1,7 @@
 import javafx.scene.layout.Priority;
 
 import java.io.*;
-import java.util.HashMap;
-import java.util.List;
-import java.util.PriorityQueue;
+import java.util.*;
 
 public class ServerStrategyRecipeMatcher implements IServerStrategy {
     @Override
@@ -16,6 +14,7 @@ public class ServerStrategyRecipeMatcher implements IServerStrategy {
             ObjectInputStream OI=new ObjectInputStream(new FileInputStream("Resources/RecipesDictionary"));
             HashMap<String,List<Recipe>> Recipes=(HashMap<String,List<Recipe>>)OI.readObject();
             PriorityQueue<PrioritizedRecipe> pq=new PriorityQueue<>(new PrioritizedRecipeComperator());
+            Set<String> RecipeTitles = new HashSet<>();
             String line;
             BufferedReader br=new BufferedReader(new FileReader("Resources/Vectors.csv"));
             while((line = br.readLine()) != null){
@@ -38,9 +37,12 @@ public class ServerStrategyRecipeMatcher implements IServerStrategy {
                 if(minMatch){
                     List<Recipe> recipeList=Recipes.get(line);
                     for(Recipe r: recipeList){
-                        PrioritizedRecipe pr=new PrioritizedRecipe(r);
-                        pr.setPriority(priority);
-                        pq.add(pr);
+                        if(!RecipeTitles.contains(r.getTitle())) {
+                            PrioritizedRecipe pr = new PrioritizedRecipe(r);
+                            pr.setPriority(priority);
+                            pq.add(pr);
+                            RecipeTitles.add(r.getTitle());
+                        }
                     }
                 }
             }

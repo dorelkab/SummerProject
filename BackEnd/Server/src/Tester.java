@@ -13,7 +13,7 @@ public class Tester {
             Socket theServer = new Socket(InetAddress.getLocalHost(), 5400);
             ObjectOutputStream toServer = new ObjectOutputStream(theServer.getOutputStream());
             ObjectInputStream fromServer = new ObjectInputStream(theServer.getInputStream());
-            toServer.writeObject("138,");
+            toServer.writeObject("14,");
             PriorityQueue<PrioritizedRecipe> pq=(PriorityQueue<PrioritizedRecipe>)fromServer.readObject();
             PrioritizedRecipe pr;
             int n=100;

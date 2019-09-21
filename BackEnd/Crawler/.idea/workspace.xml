@@ -2,21 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69d00c43-14dd-4d8a-bc52-d5482d004fd6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Server/out/production/Server/IPrioritized.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Server/out/production/Server/IServerStrategy.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Server/out/production/Server/PrioritizedRecipe.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Server/out/production/Server/PrioritizedRecipeComperator.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Server/out/production/Server/Recipe.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Server/out/production/Server/RecipesDictionary" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Server/out/production/Server/Server.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Server/out/production/Server/ServerStrategyRecipeMatcher.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Server/out/production/Server/Tester.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Server/out/production/Server/Vectors.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Server/src/Tester.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/src/PrioritizedRecipe.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/PrioritizedRecipe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/src/PrioritizedRecipeComperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/PrioritizedRecipeComperator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/out/production/Server/ServerStrategyRecipeMatcher.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/out/production/Server/ServerStrategyRecipeMatcher.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/out/production/Server/Tester.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/out/production/Server/Tester.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/src/ServerStrategyRecipeMatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/ServerStrategyRecipeMatcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/Tester.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/Tester.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -100,7 +90,7 @@
       <updated>1567003512296</updated>
       <workItem from="1567003515954" duration="82893000" />
       <workItem from="1568211690271" duration="5000" />
-      <workItem from="1568824486039" duration="2479000" />
+      <workItem from="1568824486039" duration="2661000" />
     </task>
     <servers />
   </component>
