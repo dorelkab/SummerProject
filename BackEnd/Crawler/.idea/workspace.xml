@@ -2,7 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69d00c43-14dd-4d8a-bc52-d5482d004fd6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../Server/out/production/Server/IPrioritized.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Server/out/production/Server/IServerStrategy.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Server/out/production/Server/PrioritizedRecipe.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Server/out/production/Server/PrioritizedRecipeComperator.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Server/out/production/Server/Recipe.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Server/out/production/Server/RecipesDictionary" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Server/out/production/Server/Server.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Server/out/production/Server/ServerStrategyRecipeMatcher.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Server/out/production/Server/Tester.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Server/out/production/Server/Vectors.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Server/src/Tester.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/PrioritizedRecipe.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/PrioritizedRecipe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/PrioritizedRecipeComperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/PrioritizedRecipeComperator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/src/ServerStrategyRecipeMatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/ServerStrategyRecipeMatcher.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />

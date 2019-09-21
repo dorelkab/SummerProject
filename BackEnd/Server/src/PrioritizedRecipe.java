@@ -1,4 +1,6 @@
-public class PrioritizedRecipe implements IPrioritized {
+import java.io.Serializable;
+
+public class PrioritizedRecipe implements IPrioritized, Serializable {
     private Recipe recipe;
     private int Priority;
 

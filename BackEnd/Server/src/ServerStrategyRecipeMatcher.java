@@ -17,7 +17,7 @@ public class ServerStrategyRecipeMatcher implements IServerStrategy {
             HashMap<String,List<Recipe>> Recipes=(HashMap<String,List<Recipe>>)OI.readObject();
             PriorityQueue<PrioritizedRecipe> pq=new PriorityQueue<>(new PrioritizedRecipeComperator());
             String line;
-            BufferedReader br=new BufferedReader(new FileReader("Resources/Vectors"));
+            BufferedReader br=new BufferedReader(new FileReader("Resources/Vectors.csv"));
             while((line = br.readLine()) != null){
                 int priority=0;
                 boolean minMatch=false;
