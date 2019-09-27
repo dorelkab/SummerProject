@@ -1,7 +1,5 @@
 import java.io.*;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;
@@ -17,6 +15,7 @@ public class SpiderLeg
     private List<String> links = new LinkedList<>();
     private Document htmlDocument;
     private HashMap<String,List<Recipe>> Recipes=new HashMap<>();
+    private Set<String> RecipeTitles = new HashSet<>();
 
     public boolean crawl(String url)
     {
@@ -44,8 +43,11 @@ public class SpiderLeg
                 Elements ingridients = htmlDocument.select("span[itemprop=" + "recipeIngredient" + "]");
                 Element image=htmlDocument.selectFirst("img[itemprop=image]");
                 Element title=htmlDocument.selectFirst("h1[itemprop=name]");
-                if (!ingridients.isEmpty()) {
+                if (!ingridients.isEmpty() && (title==null || !RecipeTitles.contains(title.text()))) {
+                    if(title!=null)
+                        RecipeTitles.add(title.text());
                     BufferedWriter bw = new BufferedWriter(new FileWriter("C:\\Users\\dordo\\AndroidStudioProjects\\SummerProject\\BackEnd\\DataBase\\Vectors.csv", true));
+                    BufferedWriter bw2 = new BufferedWriter(new FileWriter("C:\\Users\\dordo\\AndroidStudioProjects\\SummerProject\\BackEnd\\DataBase\\UnRecognized.csv", true));
                     String key="";
                     //System.out.println(title.text());
                     //System.out.println(image.attr("src"));
@@ -53,25 +55,25 @@ public class SpiderLeg
                     for (Element e : ingridients) {
                         BufferedReader br = new BufferedReader(new FileReader("C:\\Users\\dordo\\AndroidStudioProjects\\SummerProject\\BackEnd\\DataBase\\CompressedIngridientTable1.csv"));
                         String Ingrid = e.text().replaceAll("[\\d.]", "");
-                        String banned[] = {"שלושת רבעי", "כוסות","כפית", "חופן", "כפות", "גרם", "ליטר", "מ\"ל", "ק\"ג", "וחצי", "ורבע", "רבע", "חצי", "ושליש", "שליש", "שני שלישים", "שני שליש", "מכפית", "כוס", "מכף", "כפיות", "גדול", "קטן", "קורט", "גביע", "ועוד", "פחות", "כף", "כפית", "לפחות", "מעט", "קופסה", "מיכל", "מכלי", "מכל", "קופסת", "גדושות", "כ-", "", ",", "()","%"," ים"," ות","\uFEFF"};
+                        //String banned[] = {"שלושת רבעי", "כוסות","כפית", "חופן", "כפות", "גרם", "ליטר", "מ\"ל", "ק\"ג", "וחצי", "ורבע", "רבע", "חצי", "ושליש", "שליש", "שני שלישים", "שני שליש", "מכפית", "כוס", "מכף", "כפיות", "גדול", "קטן", "קורט", "גביע", "ועוד", "פחות", "כף", "כפית", "לפחות", "מעט", "קופסה", "מיכל", "מכלי", "מכל", "קופסת", "גדושות", "כ-", "", ",", "()","%"," ים"," ות","\uFEFF"};
                         Ingrid=Ingrid.replaceAll("[^ א-ת]", "");
-                        for (int i = 0; i < banned.length; i++) {
-                            Ingrid = Ingrid.replace(banned[i], "");
-                        }
-                        Ingrid = Ingrid.replace("  ", " ");
-                        Ingrid=Ingrid.replace("( )","");
-                        Ingrid=Ingrid.replace("()","");
-                        if (Ingrid.length()>0 && (Ingrid.charAt(0) == ' ' || Ingrid.charAt(0) == '\uFEFF')) {
-                            Ingrid = Ingrid.substring(1);
-                        }
-                        if (Ingrid.length()>0 && Ingrid.charAt(Ingrid.length() - 1) == ' ') {
-                            Ingrid = Ingrid.substring(0, Ingrid.length() - 1);
-                        }
+                        //for (int i = 0; i < banned.length; i++) {
+                          //  Ingrid = Ingrid.replace(banned[i], "");
+                        //}
+                        //Ingrid = Ingrid.replace("  ", " ");
+                        //Ingrid=Ingrid.replace("( )","");
+                        //Ingrid=Ingrid.replace("()","");
+                       // if (Ingrid.length()>0 && (Ingrid.charAt(0) == ' ' || Ingrid.charAt(0) == '\uFEFF')) {
+                         //   Ingrid = Ingrid.substring(1);
+                        //}
+                        //if (Ingrid.length()>0 && Ingrid.charAt(Ingrid.length() - 1) == ' ') {
+                          //  Ingrid = Ingrid.substring(0, Ingrid.length() - 1);
+                        //}
                         String line = null;
                         int index=0;
+                        boolean found=false;
                         while ((line = br.readLine()) != null) {
                             String[] seperated=line.split(",");
-                            boolean found=false;
                             for(int i=0; i<seperated.length; i++){
                                 if(Ingrid.contains(seperated[i])){
                                     found=true;
@@ -82,6 +84,10 @@ public class SpiderLeg
                             if(found)
                                 break;
                             index++;
+                        }
+                        if(!found){
+                            bw2.write(Ingrid);
+                            bw2.newLine();
                         }
                         br.close();
                     }
@@ -106,6 +112,7 @@ public class SpiderLeg
                         bw.newLine();
                     }
                     bw.close();
+                    bw2.close();
                 }
                 return true;
         }

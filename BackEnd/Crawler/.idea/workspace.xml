@@ -3,8 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="69d00c43-14dd-4d8a-bc52-d5482d004fd6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Crawler/SpiderLeg.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Crawler/SpiderLeg.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SpiderLeg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SpiderLeg.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DataBase/FinalData/CompressedIngridientTable1.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DataBase/FinalData/RecipesDictionary" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DataBase/FinalData/Vectors.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/out/production/Server/PrioritizedRecipe.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/out/production/Server/PrioritizedRecipe.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/out/production/Server/ServerStrategyRecipeMatcher.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/out/production/Server/ServerStrategyRecipeMatcher.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/out/production/Server/Tester.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/out/production/Server/Tester.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/src/PrioritizedRecipe.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/PrioritizedRecipe.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/src/ServerStrategyRecipeMatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/ServerStrategyRecipeMatcher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/src/Tester.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/src/Tester.java" afterDir="false" />
     </list>
@@ -90,7 +97,8 @@
       <updated>1567003512296</updated>
       <workItem from="1567003515954" duration="82893000" />
       <workItem from="1568211690271" duration="5000" />
-      <workItem from="1568824486039" duration="2661000" />
+      <workItem from="1568824486039" duration="6448000" />
+      <workItem from="1569419713498" duration="4424000" />
     </task>
     <servers />
   </component>

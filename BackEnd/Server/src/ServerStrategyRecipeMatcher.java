@@ -40,6 +40,7 @@ public class ServerStrategyRecipeMatcher implements IServerStrategy {
                         if(!RecipeTitles.contains(r.getTitle())) {
                             PrioritizedRecipe pr = new PrioritizedRecipe(r);
                             pr.setPriority(priority);
+                            pr.setKey(line);
                             pq.add(pr);
                             RecipeTitles.add(r.getTitle());
                         }

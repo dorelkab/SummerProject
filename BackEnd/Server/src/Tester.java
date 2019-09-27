@@ -13,7 +13,7 @@ public class Tester {
             Socket theServer = new Socket(InetAddress.getLocalHost(), 5400);
             ObjectOutputStream toServer = new ObjectOutputStream(theServer.getOutputStream());
             ObjectInputStream fromServer = new ObjectInputStream(theServer.getInputStream());
-            toServer.writeObject("14,");
+            toServer.writeObject("514");
             PriorityQueue<PrioritizedRecipe> pq=(PriorityQueue<PrioritizedRecipe>)fromServer.readObject();
             PrioritizedRecipe pr;
             int n=100;
@@ -22,6 +22,7 @@ public class Tester {
                 System.out.println(r.getTitle());
                 System.out.println(r.getUrl());
                 System.out.println(pr.getPriority());
+                System.out.println(pr.getKey());
                 n--;
             }
             theServer.close();

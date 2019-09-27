@@ -3,6 +3,7 @@ import java.io.Serializable;
 public class PrioritizedRecipe implements IPrioritized, Serializable {
     private Recipe recipe;
     private int Priority;
+    private String key;
 
     public PrioritizedRecipe(Recipe recipe){
         this.recipe=recipe;
@@ -21,5 +22,13 @@ public class PrioritizedRecipe implements IPrioritized, Serializable {
     @Override
     public int getPriority() {
         return this.Priority;
+    }
+
+    public void setKey(String key){
+        this.key=key;
+    }
+
+    public String getKey(){
+        return this.key;
     }
 }
